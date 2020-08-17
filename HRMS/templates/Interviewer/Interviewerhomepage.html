@@ -1,0 +1,31 @@
+{% load static %}
+{% include 'common/cssfileincluder.html' %}
+{% include 'common/header.html' %}
+{% include 'common/jsfile.html' %}
+{% include 'common/homepage.html' %}
+
+<html>
+    <body>
+        <form action="{% url 'validateInterviewer' %}" method="post" >
+            {% csrf_token %}
+            <table align="center">
+                <tr><th colspan="2">InterViewer Login</th> </tr>
+                <tr>
+                    <th>Username</th>
+                    <th><input type="text" name="Interviewer_username" required> </th>
+                </tr>
+                <tr>
+                    <th>Password</th>
+                    <th><input type="password" name="Interviewer_password" required> </th>
+                </tr>
+                <tr>
+                    <th colspan="2"><button type="submit">login</button> </th>
+                </tr>
+                <tr>
+                    <th colspan="2" style="color: red">{% include 'common/messages.html' %}</th>
+                </tr>
+            </table>
+
+        </form>
+    </body>
+</html>

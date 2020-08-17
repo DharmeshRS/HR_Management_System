@@ -1,0 +1,40 @@
+{% load static %}
+
+{% include 'HRHead/hrheadoperations.html' %}
+<html>
+<body>
+<form>
+    <table border="2" width="1360px">
+        <tr><th colspan="5" style="text-align: center" ><h2>Selected Applicants</h2></th></tr>
+        <tr style="text-align: center">
+            <th >InterviewID</th>
+            <th>Interview Officer Name</th>
+            <th>Interview Officer ID</th>
+            <th>ApplicantID</th>
+            <th>status</th>
+        </tr>
+
+
+
+        {% if it %}
+            {% for x in it %}
+            <tr>
+            <th>{{ x.id }}</th>
+            <th>{{ x.Emp_id.EmployeeName }}</th>
+            <th>{{ x.Emp_id_id }}</th>
+            <th>{{ x.ApplicantID }}</th>
+            <th>{{ x.status }}</th>
+        </tr>
+            {% endfor %}
+        {% else %}
+            <tr>
+            <th colspan="5" style="text-align: center;">
+                <h1 style="color: red">NO Record Are Available Here</h1>
+            </th>
+            </tr>
+        {% endif %}
+
+    </table>
+</form>
+</body>
+</html>

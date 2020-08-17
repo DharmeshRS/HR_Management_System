@@ -1,0 +1,37 @@
+{% load static %}
+{% include 'common/cssfileincluder.html' %}
+{% include 'common/header.html' %}
+{% include 'common/jsfile.html' %}
+{% include 'common/login/loginformadmin.html' %}
+{#<html>#}
+{#    <body>#}
+{#        <form action="{% url 'validateAdmin' %}" method="post">#}
+{#            {% csrf_token %}#}
+{#            <table align="center" border="1" style="font-size: 20px">#}
+{#                <tr><th style="text-align: center" colspan="2">Admin Login</th></tr>#}
+{#                <tr>#}
+{#                    <th>#}
+{#                        Username#}
+{#                    </th>#}
+{#                    <th>#}
+{#                        <input type="text" name="username" required>#}
+{#                    </th>#}
+{#                </tr>#}
+{#                <tr>#}
+{#                    <th>#}
+{#                        Password#}
+{#                    </th>#}
+{#                    <th>#}
+{#                        <input type="password" name="password" required>#}
+{#                    </th>#}
+{#                </tr>#}
+{#                <tr>#}
+{#                    <th style="text-align: center" colspan="2">#}
+{#                        <button type="submit" style="color: black;">submit</button>#}
+{#                    </th>#}
+{#                </tr>#}
+{#            </table>#}
+{#        </form>#}
+{#    </body>#}
+{#</html>#}
+{% include 'common/footer.html' %}

@@ -1,0 +1,80 @@
+{% load static %}
+{% include 'common/cssfileincluder.html' %}
+  <html>
+  <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>HRMS </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="manifest" href="site.webmanifest"    >
+		<link rel="shortcut icon" type="image/x-icon" href="{% static 'img/helogo.png'%}">
+
+	</head>
+   <body >
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="{% static 'img/helogo.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header style="background: -webkit-linear-gradient(left, #3931af, #00c6ff);;">
+        <!-- Header Start -->
+       <div class="header-area header_area header-black" style="background: -webkit-linear-gradient(left, #3931af, #00c6ff);;">
+            <div class="main-header">
+               <div class="header-bottom  header-sticky">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div class="col-xl-2 col-lg-1 col-md-1">
+                                <div class="logo">
+                                  <a href="{# index.html #}#"><img src="{% static 'img/hr-outsourcing.png' %}" alt="" width="100" height="100"></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-8 col-lg-8 col-md-8">
+                                <!-- Main-menu -->
+                                <div class="main-menu f-right d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation" >
+{#                                            <li><a href="{% url 'admin' %}" style="font-size: 20px">Home</a></li>#}
+                                            <li><a href="{% url 'admin' %}" style="font-size: 22px">Admin</a></li>
+                                            <li><a href="{% url 'managerhomepage' %}" style="font-size: 22px">Manager</a></li>
+                                            <li><a href="{% url 'applicant' %}" style="font-size: 22px">Applicant</a></li>
+                                            <li><a href="{% url 'interviewer' %}" style="font-size: 22px">Interviewer</a>
+                                            <li><a href="{% url 'hrheadhomepage' %}" style="font-size: 22px">HRHead</a>                                       </li>
+
+{#                                            <li><a href="#">Contact</a></li>#}
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-xl-2 col-lg-3 col-md-3" >
+                                <div class="header-right-btn f-right d-none d-lg-block">
+                                    <a href="#" class="btn header-btn">Contact Now</a>
+                                </div>
+                            </div>
+                            <!-- Mobile Menu -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+            </div>
+       </div>
+        <!-- Header End -->
+    </header>
+
+
+   </body>
+  {% include 'common/jsfile.html' %}
+  </html>

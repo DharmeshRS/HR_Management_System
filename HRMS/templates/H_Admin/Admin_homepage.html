@@ -1,0 +1,53 @@
+{% load static %}
+{% include 'common/cssfileincluder.html' %}
+{% include 'common/header/admin.html' %}
+{% include 'common/jsfile.html' %}
+
+<html>
+    <body style="">
+        <form>
+            <div style="border-color:white;height: 60px;background: -webkit-linear-gradient(left,#d7deed,blue);color: white">
+            <table border="0" style="background: -webkit-linear-gradient(right,cyan,#867cff);font-size: 30px;color: white;background-image:url("{% static 'img/coverimage_1702147174219_human-resources.jpg' %}")" align="center">
+
+                <tr><th colspan=12"></th></tr>
+                <tr>
+                    <th>
+                        <a href="{% url 'AddEmployee' %}" style="color: white;font-family: Centaur">
+                            Add Employee
+                        </a>
+                    </th>
+                    <th width="90"></th>
+                    <th width="0"></th>
+                    <th>
+                        <a href="{% url 'ViewEmployee' %}" style="color: white;font-family: Centaur">
+                            View Employee
+                        </a>
+                    </th>
+                <th width="90"></th>
+                <th width="00"></th>
+                    <th>
+                        <a href="{% url 'updateEmployee' %}" style="color: white;font-family: Centaur">
+                            Update Employee
+                        </a>
+                    </th>
+                <th width="90"></th>
+                <th width="0"></th>
+                    <th>
+                        <a href="{% url 'deleteEmployee' %}"  style="color: white;font-family: Centaur">
+                            Delete Employee
+                        </a>
+                    </th>
+
+                </tr>
+{#                <tr><th></th></tr>#}
+            </table>
+            </div>
+            <div style="color: white;font-family: Centaur">
+                {% include 'common/messages.html' %}
+            </div>
+
+        </form>
+    </body>
+</html>
+
+

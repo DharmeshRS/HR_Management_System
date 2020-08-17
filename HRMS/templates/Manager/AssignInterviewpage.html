@@ -1,0 +1,46 @@
+{% load static %}
+{% include 'common/cssfileincluder.html' %}
+{% include 'common/header/Manager.html' %}
+{% include 'common/jsfile.html' %}
+
+<html>
+    <body>
+        <form action="{% url 'saveint_detailsdata' %}" method="post">
+        {% csrf_token %}
+            <table align="center">
+                <tr>
+                    <th colspan="2" style="font-size: 30px;background-color: red">Assign An Interview For an Applicant</th>
+                </tr>
+                <tr>
+                    <th>ApplicantID</th>
+                    <th><input type="number" name="applicantid" value="{{ applicantid }}" readonly></th>
+                </tr>
+                <tr>
+                    <th>Select Interview Officer</th>
+                    <th>
+                        <select name="empid">
+                            {% for x in interviewform %}
+                            <option value="{{ x.EmployeeID }}">
+                            {{ x.EmployeeID }}|{{ x.EmployeeName }}
+{#                            <th>{{ x.EmployeeName}}</th>#}
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </th>
+
+                </tr>
+                <tr>
+                    <th>Schedule Date</th>
+                    <th><input type="date" name="scheduledate" required></th>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        <button type="submit">Add to Interview Schedule</button>
+                    </th>
+                </tr>
+
+            </table>
+        </form>
+
+    </body>
+</html>

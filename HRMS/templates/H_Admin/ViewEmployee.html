@@ -1,0 +1,30 @@
+{% include 'H_Admin/Admin_homepage.html' %}
+<html>
+    <body>
+        <form>
+            <table border="1" style="background-color: lightblue" width="1365px">
+            <tr><th style="font-size: 40px;text-align: center" colspan="7">All Employee Information</th></tr>
+                <tr style="background-color: red">
+                    <th width="120">EmployeeID</th>
+                    <th width="120">EmployeeName</th>
+                    <th width="120">Password</th>
+                    <th width="120">Designation</th>
+                    <th width="120">Address</th>
+                    <th width="120">Contact No</th>
+                    <th width="300">EmailID</th>
+                </tr>
+                {% for x in data %}
+                    <tr>
+                    <th>{{ x.EmployeeID }}</th>
+                    <th>{{ x.EmployeeName}}</th>
+                    <th>{{ x.Password }}</th>
+                    <th>{{ x.Designation }}</th>
+                    <th>{{ x.Address }}</th>
+                    <th>{{ x.Contact_No }}</th>
+                    <th>{{ x.EmailID }}</th>
+                    </tr>
+                {% endfor %}
+            </table>
+        </form>
+    </body>
+</html>

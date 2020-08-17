@@ -1,0 +1,64 @@
+{% load static %}
+
+{% include 'H_Admin/Admin_homepage.html' %}
+<html>
+    <body>
+        <form action="{% url 'saveemployee' %}" method="post">
+            {% csrf_token %}
+            <table border="0" align="center" style="background: -webkit-linear-gradient(left,cyan,#a5ffff)">
+                <tr>
+                    <th colspan="2" style="font-size: 40px;font-family:Bahnschrift;text-align: center;margin-top: 100px;"><b>Add Employee</b>
+                    </th>
+                </tr>
+                <hr>
+                <tr>
+                    <th>Employee Name :</th>
+                    <th>
+                        {{ employeeform.EmployeeName }}
+                    </th>
+                </tr>
+                <tr>
+                    <th>Employee Email :</th>
+                    <th>
+                        {{ employeeform.EmailID }}
+                    </th>
+                </tr>
+                <tr>
+                    <th>Password :</th>
+                    <th>
+                        {{ employeeform.Password }}
+                    </th>
+                </tr>
+                <tr>
+                    <th>Designation :</th>
+                    <th>
+                        {{ employeeform.Designation }}
+                    </th>
+                </tr>
+                <tr>
+                    <th>Contact No:</th>
+                    <th>
+                        {{ employeeform.Contact_No }}
+                    </th>
+                </tr>
+                <tr>
+                    <th>Address :</th>
+                    <th>
+                        <textarea cols="50" rows="6">
+                            {{ employeeform.Address }}
+                        </textarea>
+
+                    </th>
+                </tr>
+
+
+                <tr>
+                    <th colspan="2" style="text-align: center;color: black">
+                        <button type="submit" style="color: black;">save</button>
+                    </th>
+                </tr>
+            </table>
+
+        </form>
+    </body>
+</html>

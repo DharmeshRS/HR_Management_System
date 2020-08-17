@@ -1,0 +1,48 @@
+
+{% include 'H_Admin/Admin_homepage.html' %}{% load static %}
+<html>
+    <body>
+        <form action="{% url 'deleteEmployee' %}" method="post">
+        {% csrf_token %}
+            <table align="center" border="1" style="background-color: lightblue">
+                <tr><th style="text-align: center;font-size: 30px " colspan="9">Delete Employee Details Form</th></tr>
+                <tr style="background-color: red">
+                    <th width="130"></th>
+                    <th width="130">EmployeeID</th>
+                    <th width="130">EmployeeName</th>
+                    <th width="130">Password</th>
+                    <th width="130">Designation</th>
+                    <th width="130">Address</th>
+                    <th width="130">Contact No</th>
+                    <th width="130">EmailID</th>
+
+                </tr>
+                {% for x in data %}
+                    <tr>
+                    <th><input type="checkbox" name="checkbox" value="{{ x.EmployeeID }}"></th>
+                    <th>{{ x.EmployeeID }}</th>
+                    <th>{{ x.EmployeeName}}</th>
+                    <th>{{ x.Password }}</th>
+                    <th>{{ x.Designation }}</th>
+                    <th>{{ x.Address }}</th>
+                    <th>{{ x.Contact_No }}</th>
+                    <th>{{ x.EmailID }}</th>
+{#                    <th>#}
+{#                        <a href="?eid={{ x.EmployeeID }}&enm={{ x.EmployeeName }}">Delete</a></th>#}
+                    </tr>
+                {% endfor %}
+                    <tr>
+                    <th colspan="9"  style="text-align: center"><button type="submit"><img src="{% static 'img/trash.jpg' %}" width="50" align="center"></button> </th>
+                    </tr>
+            {% if messages %}
+                {% for x in messages %}
+            <tr>
+                <th colspan="9"  style="text-align: center">{{ x }}</th>
+            </tr>
+                {% endfor %}
+            {% endif %}
+
+            </table>
+        </form>
+    </body>
+</html>

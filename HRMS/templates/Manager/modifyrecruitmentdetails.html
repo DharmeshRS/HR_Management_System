@@ -1,0 +1,38 @@
+{% load static %}
+
+
+{% include 'Manager/manager_recruitment.html' %}
+<html>
+<body>
+<form action="{% url 'savemodifyrecruitmentdetails' %}" method="post">
+    {% csrf_token %}
+    <table align="center" style="background-color: lightblue">
+        <tr>
+            <th style="font-size: 40px" colspan="2">
+                Modifying Recruitment Details
+
+            </th>
+        </tr>
+        <tr>
+            <th>Select Opportunity Code</th>
+            <th><input type="number" name="opcode" required> </th>
+        </tr>
+        <tr><th></th></tr>
+        <tr><th></th></tr>
+        <tr><th></th></tr>
+        <tr><th></th></tr>
+        <tr><th></th></tr>
+        <tr><th></th></tr>
+        <tr>
+            <th colspan="2"><button type="submit" >Getdetails</button> </th>
+        </tr>
+        <tr>
+            <th colspan="6">
+                {% include 'common/messages.html' %}
+            </th>
+        </tr>
+
+    </table>
+</form>
+</body>
+</html>

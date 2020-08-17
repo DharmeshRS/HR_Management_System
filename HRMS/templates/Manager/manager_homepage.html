@@ -1,0 +1,39 @@
+{% load static %}
+{% include 'common/cssfileincluder.html' %}
+{% include 'common/header/Manager.html' %}
+{% include 'common/jsfile.html' %}
+<html>
+    <body>
+        <form>
+            <table align="center" style="background-color: lightblue;text-align: center;" width="1310" cellpadding="10" >
+                <tr style="background-color: white">
+                    <th colspan="6">
+                        {% include 'common/messages.html' %}
+{#                        {% if messages %}#}
+{#                {% for x in messages %}#}
+{#                    <tr>#}
+{#                    <th style="color: red"><h1>{{ x }}</h1></th>#}
+{#                    </tr>#}
+{#                {% endfor %}#}
+{#            {% endif %}#}
+                    </th>
+                </tr>
+                <tr style="font-size: 30px"><th>Manager Operations</th></tr>
+                <tr>
+                    <th>
+                        <a href="{% url 'recruitments' %}">
+                            <h1>Recruitments</h1>
+                        </a>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <a href="{% url 'interviewschedule' %}">
+                            <h1>Interview Schedule</h1>
+                        </a>
+                    </th>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

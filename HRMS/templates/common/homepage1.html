@@ -1,0 +1,263 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>HRMS </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="manifest" href="site.webmanifest"    >
+		<link rel="shortcut icon" type="image/x-icon" href="{% static 'img/helogo.png'%}">
+
+		<!-- CSS here -->
+            <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/slicknav.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/fontawesome-all.min.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/themify-icons.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/nice-select.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+   </head>
+
+   <body>
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="{% static 'img/helogo.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header style="background: -webkit-linear-gradient(left,#bafff7,#5a18ff)">
+        <!-- Header Start -->
+       <div class="header-area header_area header-black" style="background: -webkit-linear-gradient(left,#bafff7,#5a18ff)">
+            <div class="main-header">
+               <div class="header-bottom  header-sticky">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div class="col-xl-2 col-lg-1 col-md-1">
+                                <div class="logo">
+                                  <a href="#"><img src="{% static 'img/hr (3).png' %}" alt="" style="width: 100px;"></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-8 col-lg-8 col-md-8">
+                                <!-- Main-menu -->
+                                <div class="main-menu f-right d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation" >
+{#                                            <li><a href="{% url 'admin' %}" style="font-size: 20px">Home</a></li>#}
+                                            <li><a href="{% url 'admin' %}" style="font-size: 20px">Admin</a></li>
+                                            <li><a href="{% url 'managerhomepage' %}" style="font-size: 20px">Manager</a></li>
+                                            <li><a href="{% url 'applicant' %}" style="font-size: 20px">Applicant</a></li>
+                                            <li><a href="{% url 'interviewer' %}" style="font-size: 20px">Interviewer</a>
+                                            <li><a href="{% url 'hrheadhomepage' %}" style="font-size: 20px">HRHead</a>                                       </li>
+
+{#                                            <li><a href="#">Contact</a></li>#}
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-xl-2 col-lg-3 col-md-3">
+                                <div class="header-right-btn f-right d-none d-lg-block">
+                                    <a href="#" class="btn header-btn">Contact Now</a>
+                                </div>
+                            </div>
+                            <!-- Mobile Menu -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+            </div>
+       </div>
+        <!-- Header End -->
+    </header>
+    <main >
+
+        <!-- slider Area Start-->
+        <div class="slider-area  slider-height" style="background: -webkit-linear-gradient(left,#bafff7,#5a18ff)">
+            <div class="slider-active">
+                <!-- Single Slider -->
+                <div class="single-slider">
+                    <div class="slider-cap-wrapper">
+                          <div class="hero__img">
+                            <img src="{% static 'img/coverimage_1702147174219_human-resources.jpg' %}" style="width: 800px" alt=""  data-animation="fadeInRight" data-transition-duration="5s">
+                          </div>
+                          <div class="hero__caption">
+                              <h1 data-animation="fadeInLeft" data-delay=".4s">HRMS <br>It's Human Resourse Management System</h1>
+                              <p data-animation="fadeInLeft" data-delay=".6s">This Web Application Developing Using HTML,CSS,JS with Backend Django(pythom Framework)</p>
+                              <!-- Hero Btn -->
+                              <a href="#" class="hero-btn"  data-animation="fadeInLeft" data-delay=".9s" >
+                                  Start Project From Above
+                                  <!-- Arrow SVG icon -->
+                                  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                  viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                 <path d="M506.134,241.843c-0.006-0.006-0.011-0.013-0.018-0.019l-104.504-104c-7.829-7.791-20.492-7.762-28.285,0.068
+                                         c-7.792,7.829-7.762,20.492,0.067,28.284L443.558,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h423.557
+                                         l-70.162,69.824c-7.829,7.792-7.859,20.455-0.067,28.284c7.793,7.831,20.457,7.858,28.285,0.068l104.504-104
+                                         c0.006-0.006,0.011-0.013,0.018-0.019C513.968,262.339,513.943,249.635,506.134,241.843z"/> </svg>
+                             </a>
+                          </div>
+                    </div>
+                </div>
+                <!-- Single Slider -->
+                <div class="single-slider" >
+                    <div class="slider-cap-wrapper">
+                          <div class="hero__img">
+                            <img src="{% static 'assets/img/hero/hero_img2.jpg' %}" alt=""  data-animation="fadeInRight" data-transition-duration="5s">
+                          </div>
+                          <div class="hero__caption">
+                              <h1 data-animation="fadeInLeft" data-delay=".4s">Business Synergy via <br>Robust Strategies</h1>
+                              <p data-animation="fadeInLeft" data-delay=".6s">Aasrem dfgum dolor sivst amet, consectetur adipisicing elitvde, sed dvo eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad micnim veniam, quis nostrud exercita.</p>
+                              <!-- Hero Btn -->
+                              <a href="#" class="hero-btn"  data-animation="fadeInLeft" data-delay=".9s" >
+                                  View project
+                                  <!-- Arrow SVG icon -->
+                                  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                  viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                 <path d="M506.134,241.843c-0.006-0.006-0.011-0.013-0.018-0.019l-104.504-104c-7.829-7.791-20.492-7.762-28.285,0.068
+                                         c-7.792,7.829-7.762,20.492,0.067,28.284L443.558,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h423.557
+                                         l-70.162,69.824c-7.829,7.792-7.859,20.455-0.067,28.284c7.793,7.831,20.457,7.858,28.285,0.068l104.504-104
+                                         c0.006-0.006,0.011-0.013,0.018-0.019C513.968,262.339,513.943,249.635,506.134,241.843z"/> </svg>
+                             </a>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider Area End-->
+    <footer style="background: -webkit-linear-gradient(left,cyan,#b8ede4)">
+        <!-- Footer Start-->
+        <div class="footer-area" style="background: -webkit-linear-gradient(left,#bafff7,#5a18ff)">
+            <div class="container">
+               <div class="footer-top footer-padding">
+                    <div class="row justify-content-between">
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="single-footer-caption mb-30">
+                                    <!-- logo -->
+                                    <div class="footer-logo">
+                                        <a href="#"><img src="{% static 'img/hr (3).png' %}" width="280px"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle" style="color: black">
+                                    <h3 style="color: black">Services</h3>
+                                    <ul>
+                                        <li><a href="#" style="color: black">Marketing</a></li>
+                                        <li><a href="#" style="color: black"> SEO Service</a></li>
+                                        <li><a href="#" style="color: black">Digital market</a></li>
+                                        <li><a href="#" style="color: black">Content create</a></li>
+                                        <li><a href="#" style="color: black">Find Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h3 style="color: black">Customer Care</h3>
+                                    <ul>
+                                        <li><a href="#" style="color: black">Contact Us</a></li>
+                                        <li><a href="#" style="color: black">About Us</a></li>
+                                        <li><a href="#" style="color: black">News & Articles</a></li>
+                                        <li><a href="#" style="color: black">Privacy Policy</a></li>
+                                        <li><a href="#" style="color: black"> Terms of Use</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4><span>+564</span> 7885 3222</h4>
+                                    <ul>
+                                        <li><a href="#" style="color: black">youremail@gmail.com</a></li>
+                                    </ul>
+                                    <p style="color: black">123 East 26th Street, Fifth Floor, New York, NY 10011</p>
+                                </div>
+                                <!-- footer social -->
+                                <div class="footer-social">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fas fa-globe"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+                <div class="footer-bottom">
+                    <div class="row">
+                        <div class="col-xl-12 ">
+                            <div class="footer-copy-right">
+                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by Dharmesh SOnar
+{#                                    <a href="https://colorlib.com" target="_blank">Colorlib</a>#}
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
+    <!-- Scroll Up -->
+    <div id="back-top" >
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
+
+
+    <!-- JS here -->
+		<!-- All JS Custom Plugins Link Here here -->
+        <script src="{% static 'assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+		<!-- Jquery, Popper, Bootstrap -->
+		<script src="{% static 'assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+        <script src="{% static 'assets/js/popper.min.js' %}"></script>
+        <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+	    <!-- Jquery Mobile Menu -->
+        <script src="{% static 'assets/js/jquery.slicknav.min.js' %}"></script>
+
+		<!-- Jquery Slick , Owl-Carousel Plugins -->
+        <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'assets/js/slick.min.js' %}"></script>
+		<!-- One Page, Animated-HeadLin -->
+        <script src="{% static 'assets/js/wow.min.js' %}"></script>
+		<script src="{% static 'assets/js/animated.headline.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.magnific-popup.js' %}"></script>
+
+		<!-- Nice-select, sticky -->
+        <script src="{% static 'assets/js/jquery.nice-select.min.js' %}"></script>
+		<script src="{% static 'assets/js/jquery.sticky.js' %}"></script>
+
+        <!-- contact js -->
+        <script src="{% static 'assets/js/contact.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.form.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.validate.min.js' %}"></script>
+        <script src="{% static 'assets/js/mail-script.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.ajaxchimp.min.js' %}"></script>
+
+		<!-- Jquery Plugins, main Jquery -->
+        <script src="{% static 'assets/js/plugins.js' %}"></script>
+        <script src="{% static 'assets/js/main.js' %}"></script>
+
+    </main></body>
+</html>

@@ -1,0 +1,35 @@
+{% load static %}
+{% include 'common/cssfileincluder.html' %}
+{% include 'common/header.html' %}
+{% include 'common/jsfile.html' %}
+<html>
+    <body style="background-image: url('{% static 'loginform/images/bg-01.jpg' %}');">
+        <form action="{% url 'validateManager' %}" method="post" >
+        {% csrf_token %}
+            <table align="center">
+            <tr>
+                <th style="font-size: 40px" colspan="2">Manager Login</th>
+            </tr>
+                <tr>
+                    <th>Username</th>
+                    <th><input type="text" name="manager_username" required></th>
+                </tr>
+                <tr>
+                    <th>Password</th>
+                    <th><input type="text" name="manager_password" required></th>
+                </tr>
+                <tr>
+
+                    <th colspan="2"><button type="submit">submit</button> </th>
+                </tr>
+            {% if messages %}
+                {% for x in messages %}
+                    <tr>
+                    <th>{{ x }}</th>
+                    </tr>
+                {% endfor %}
+            {% endif %}
+            </table>
+        </form>
+    </body>
+</html>

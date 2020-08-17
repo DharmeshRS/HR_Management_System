@@ -1,0 +1,50 @@
+{% load static %}
+
+{% include 'HRHead/hrheadoperations.html' %}
+<html>
+<body>
+    <form enctype="multipart/form-data">
+        <table border="2" style="text-align: center" width="1360px">
+            <tr><th colspan="12" style="text-align: center;color: #014b85;"><h3>All ShortListed Applicants Information</h3></th></tr>
+            <tr>
+                <th>ApplicantID</th>
+                <th>Name</th>
+                <th>DOB</th>
+                <th>EmailID</th>
+                <th>Gender</th>
+                <th>Mobile No</th>
+                <th>Address</th>
+                <th>Qualification</th>
+                <th>Percentage</th>
+                <th>Resume</th>
+                <th>Post</th>
+                <th>Status</th>
+            </tr>
+        {% if allapplicants %}
+            {% for x in allapplicants %}
+                <tr>
+                <th width="100">{{ x.ApplicantID }}</th>
+                <th width="100">{{ x.Name }}</th>
+                <th width="100">{{ x.DOB }}</th>
+                <th width="100">{{ x.Email_ID }}</th>
+                <th width="100">{{ x.Gender }}</th>
+                <th width="100">{{ x.Mobile_No }}</th>
+                <th width="100">{{ x.Address }}</th>
+                <th width="100">{{ x.Qualification }}</th>
+                <th width="100">{{ x.Percentage }}</th>
+                <th width="100" style="background-color: white">
+                    <a href="{{ x.Resume_upload_to.url }}">
+                        {{ x.Resume_upload_to }}
+                    </a>
+                </th>
+                <th width="100">{{ x.Post_id }}</th>
+                <th width="100">{{ x.status }}</th>
+            </tr>
+            {% endfor %}
+        {% else %}
+            <tr><th colspan="12" style="text-align: center;font-size: 30px;color: red">No shortlisted Candidate </th></tr>
+        {% endif %}
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{% include 'common/homepage.html' %}
+<html>
+    <body>
+        <form action="{% url 'validateApplicant' %}" method="post" >
+            {% csrf_token %}
+            <table align="center">
+                <tr><th colspan="2">Applicant Login</th> </tr>
+                <tr>
+                    <th>Username</th>
+                    <th><input type="text" name="Applicant_username" required> </th>
+                </tr>
+                <tr>
+                    <th>Password</th>
+                    <th><input type="password" name="Applicant_password" required> </th>
+                </tr>
+                <tr>
+                    <th colspan="2"><button type="submit">login</button> </th>
+                </tr>
+                <tr>
+                    <th colspan="2" style="color: cornflowerblue;font-size: 30px">
+                        <a href="{% url 'registrationpage' %}">New Registration</a>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="2" style="color: red">{% include 'common/messages.html' %}</th>
+                </tr>
+            </table>
+
+        </form>
+    </body>
+</html>

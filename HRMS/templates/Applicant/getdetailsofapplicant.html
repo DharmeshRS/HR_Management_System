@@ -1,0 +1,50 @@
+{% load static %}
+{% include 'common/cssfileincluder.html' %}
+{% include 'common/header.html' %}
+{% include 'common/jsfile.html' %}
+
+
+<html>
+<body>
+    <form action="{% url 'applicant_statusresult' %}" method="post">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <th colspan="2"><h1>Assign An Interview For An Applicant</h1></th>
+            </tr>
+            <tr>
+                <th>Interview ID</th>
+                <th><input type="number" value="{{ interviewdetails.id }}" readonly></th>
+            </tr>
+            <tr>
+                <th>Applicant ID</th>
+                <th><input type="number" value="{{ interviewdetails.ApplicantID }}" name="applicantid" readonly></th>
+            </tr>
+            <tr>
+                <th>Interviewer Officer ID</th>
+                <th><input type="number" value="{{ interviewdetails.Emp_id_id }}" name="empid" readonly></th>
+
+            </tr>
+            <tr>
+                <th>Schedule Date</th>
+                <th><input type="text" value="{{ interviewdetails.schedule_date }}" name="sdate" readonly></th>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <th>
+                    <select name="status">
+                        <option value="selected">selected</option>
+                        <option value="rejected">rejected</option>
+                    </select>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <button type="submit">Add to Interview Schedule</button>
+                </th>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>

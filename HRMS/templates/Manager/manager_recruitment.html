@@ -1,0 +1,42 @@
+{% load static %}
+{% include 'common/header/Manager.html' %}
+
+<html>
+    <body>
+        <form>
+            <table align="left" width="1365px">
+                <tr style="background-color: lightblue">
+                    <th style="font-size: 30px;text-align: center" colspan="5">Recruitment Schedule</th>
+                </tr>
+                <tr style="background-color: lightgray">
+                    <th width="330">
+                        <a href="{% url 'new_recruitment' %}">
+                            <h2>New Recruitments Details </h2>
+                        </a>
+                    </th>
+
+                    <th width="330">
+                        <a href="{% url 'modifyrecruitmentdetails' %}">
+                            <h2>Modifying Recruitments Details </h2>
+                        </a>
+                    </th>
+
+                    <th width="330">
+                        <a href="{% url 'deleterecruitment' %}">
+                            <h2>Deleting Recruitments Details </h2>
+                        </a>
+                    </th>
+
+                    <th width="130">
+                        <a href="{% url 'backtomanager' %}">
+                            <h2>Back </h2>
+                        </a>
+                    </th>
+                </tr>
+                <tr>
+                    <th>{% include 'common/messages.html' %}</th>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

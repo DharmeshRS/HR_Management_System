@@ -1,0 +1,31 @@
+{% load static %}
+{% include 'common/cssfileincluder.html' %}
+{% include 'common/header.html' %}
+{% include 'common/jsfile.html' %}
+{% include 'common/homepage.html' %}
+
+<html>
+    <body>
+        <form action="{% url 'validatehr' %}" method="post" >
+            {% csrf_token %}
+            <table align="center">
+                <tr><th colspan="2">HR Login</th> </tr>
+                <tr>
+                    <th>Username</th>
+                    <th><input type="text" name="hr_username" required> </th>
+                </tr>
+                <tr>
+                    <th>Password</th>
+                    <th><input type="password" name="hr_password" required> </th>
+                </tr>
+                <tr>
+                    <th colspan="2"><button type="submit">login</button> </th>
+                </tr>
+                <tr>
+                    <th colspan="2" style="color: red">{% include 'common/messages.html' %}</th>
+                </tr>
+            </table>
+
+        </form>
+    </body>
+</html>

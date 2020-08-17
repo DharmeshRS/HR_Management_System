@@ -1,0 +1,34 @@
+{% load static %}
+{% include 'common/cssfileincluder.html' %}
+{% include 'common/header/hrheadheader.html' %}
+{% include 'common/jsfile.html' %}
+<html>
+    <body>
+        <table style="width: 1365px;background: -webkit-linear-gradient(left,cyan,#f3ff63)" cellspacing="300">
+            <tr style="text-align: center;">
+                <th width="2px">
+                    <h2>
+                        <a href="{% url 'shortlistedApplicants' %}">
+                            View ShortListed Applicants
+                        </a>
+                    </h2>
+                </th>
+
+                <th width="20px" >
+                    <h2 >
+                        <a href="{% url 'selectedApplicants' %}">
+                            View Selected Applicants
+                        </a>
+                    </h2>
+                </th>
+                <th width="20px">
+                    <h2 style="text-align: center">
+                        <a href="{% url 'rejectedApplicants' %}">
+                            View Rejected Applicants
+                        </a>
+                    </h2>
+                </th>
+            </tr>
+        </table>
+    </body>
+</html>

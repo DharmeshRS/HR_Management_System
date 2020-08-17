@@ -1,0 +1,47 @@
+{% load static %}
+
+{% include 'Manager/manager_recruitment.html' %}
+<html>
+    <body>
+    <form action="{% url 'deleterecruitmentconfirm' %}" method="post">
+    {% csrf_token %}
+        <table border="2" align="center" style="background-color: lightblue">
+        <tr>
+            <th colspan="11" style="font-size: 40px">Delete Recruitment Page</th>
+        </tr>
+            <tr>
+                <th></th>
+                <th>OpportunityCode</th>
+                <th>Qualification</th>
+                <th>Registration start date</th>
+                <th>Age_limit</th>
+                <th>Last date of apply</th>
+                <th>Department Id</th>
+                <th>No_Of_Positions</th>
+                <th>Description</th>
+                <th>Responsibilities</th>
+                <th>Contact No</th>
+            </tr>
+            {% for x in recruitmentdata %}
+                <tr>
+                <th><input type="checkbox" value="{{ x.OpportunityCode }}" name="opcode"></th>
+                <th>{{ x.OpportunityCode }}</th>
+                <th>{{ x.Qualification }}</th>
+                <th>{{ x.Registration_start_date }}</th>
+                <th>{{ x.Age_limit }}</th>
+                <th>{{ x.Last_date_of_apply }}</th>
+                <th>{{ x.Department_id }}</th>
+                <th>{{ x.No_Of_Positions }}</th>
+                <th>{{ x.Description }}</th>
+                <th>{{ x.Responsibilities }}</th>
+                <th>{{ x.Contact_no }}</th>
+                </tr>
+            {% endfor %}
+        <tr>
+            <th colspan="11"><button type="submit">Delete</button> </th>
+        </tr>
+        {% include 'common/messages.html' %}
+        </table>
+    </form>
+    </body>
+</html>

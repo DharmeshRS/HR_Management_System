@@ -1,0 +1,71 @@
+{% load static %}
+{% include 'common/header/Applicantheader.html' %}
+<html>
+<body>
+<form action="{% url 'saveapplicantform' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table align="center" style="font-size: 25px;background-color: cornflowerblue" border="2">
+        <tr><th colspan="2" style="text-align: center;font-family: Centaur;background-color: #c7c7c7"><h1>New Application Form</h1></th></tr>
+        <tr>
+            <th>Name :</th>
+            <th><input type="text" name="name" required></th>
+        </tr>
+        <tr>
+            <th>Date Of Birth :</th>
+            <th><input type="date" name="dob" required></th>
+        </tr>
+        <tr>
+            <th>Email :</th>
+            <th><input type="email" name="email" required></th>
+        </tr>
+        <tr>
+            <th>Gender</th>
+            <th><input type="radio" name="radio" value="male" checked>Male
+            <input type="radio" name="radio" value="female">Female</th>
+        </tr>
+        <tr>
+            <th>Mobile No</th>
+            <th><input type="number" name="mobileno" maxlength="10" minlength="10" required></th>
+        </tr>
+        <tr>
+            <th>Address</th>
+            <th>
+                <textarea name="address" required></textarea>
+            </th>
+        </tr>
+        <tr>
+            <th>Qualification:</th>
+            <th><input type="text" name="qualification" required></th>
+        </tr>
+        <tr>
+        <th>Post</th>
+            <th>
+                <select name="post" required>
+                {% for x in applicantform %}
+                    {% if None %}
+
+                    <option>No Any Post</option>
+                    {% else %}
+                    <option value="{{ x.OpportunityCode }}">
+                    {{ x.OpportunityCode }}
+                    </option>
+                    {% endif%}
+                {% endfor %}
+                </select>
+            </th>
+        </tr>
+        <tr>
+            <th>Percentage :</th>
+            <th><input type="text" name="percentage" required></th>
+        </tr>
+        <tr>
+            <th>Upload Your Resume</th>
+            <th><input type="file" name="upload" required></th>
+        </tr>
+
+
+        <tr><th colspan="2" style="text-align:center"><button type="submit">Apply</button> </th></tr>
+    </table>
+</form>
+</body>
+</html>
